@@ -1,0 +1,104 @@
+pipeline:
+
+  build:
+    privileged: true
+    image: quay.io/ukhomeofficedigital/openjdk8:v1.1.0
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+    commands:
+      - ./gradlew build
+    when:
+     event: [push, pull_request, tag]
+  
+  docker-build:
+    privileged: true
+    image: docker:1.11
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+    commands:
+      - docker build -t pttg-ip-stub .
+    when:
+      branch: [master, refs/tags/*]
+      event: [push, tag]
+
+  tag-latest-docker-image:
+    image: docker:1.11
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+    commands:
+      - docker login -u="ukhomeofficedigital+pttg" -p=${DOCKER_PASSWORD} quay.io
+      - docker tag pttg-ip-stub quay.io/ukhomeofficedigital/pttg-ip-stub:latest
+      - docker tag pttg-ip-stub quay.io/ukhomeofficedigital/pttg-ip-stub:build-${DRONE_BUILD_NUMBER}
+      - docker push quay.io/ukhomeofficedigital/pttg-ip-stub:latest
+      - docker push quay.io/ukhomeofficedigital/pttg-ip-stub:build-${DRONE_BUILD_NUMBER}
+    when:
+      branch: master
+      event: push
+
+  tag-docker-image-with-git-tag:
+    image: docker:1.11
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+    commands:
+      - docker login -u="ukhomeofficedigital+pttg" -p=${DOCKER_PASSWORD} quay.io
+      - docker tag pttg-ip-stub quay.io/ukhomeofficedigital/pttg-ip-stub:${DRONE_TAG}-${DRONE_BUILD_NUMBER}
+      - docker push quay.io/ukhomeofficedigital/pttg-ip-stub:${DRONE_TAG}-${DRONE_BUILD_NUMBER}
+    when:
+      event: tag
+
+  get-kube-configuration:
+    image: plugins/git
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+    commands:
+      - git clone https://github.com/UKHomeOffice/kube-pttg-ip-stub.git
+    when:
+      branch: [master]
+      event: [push, tag]
+
+  get-kube-configuration-deployment:
+    image: plugins/git
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+    commands:
+      - git clone https://github.com/UKHomeOffice/kube-pttg-ip-stub.git
+    when:
+      event: deployment
+
+  deploy-to-dev-from-build-number:
+    image: quay.io/ukhomeofficedigital/kd:v0.2.2
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+      - KUBE_NAMESPACE=pt-i-dev
+      - ENVIRONMENT=dev
+      - VERSION=build-${DRONE_BUILD_NUMBER}
+      - KUBE_SERVER_DEV=https://kube-dev.dsp.notprod.homeoffice.gov.uk
+    commands:
+      - cd kube-pttg-ip-stub
+      - ./deploy.sh
+    when:
+      branch: development
+      event: push
+
+  deploy:
+    image: quay.io/ukhomeofficedigital/kd:v0.2.2
+    environment:
+      - DOCKER_HOST=tcp://127.0.0.1:2375
+      - KUBE_NAMESPACE=pt-i-${DRONE_DEPLOY_TO}
+      - ENVIRONMENT=${DRONE_DEPLOY_TO}
+      - VERSION=${IMAGE_VERSION}
+      - KUBE_SERVER_DEV=https://kube-dev.dsp.notprod.homeoffice.gov.uk
+    commands:
+      - env
+      - cd kube-pttg-ip-stub
+      - ./deploy.sh
+    when:
+      event: deployment
+  
+services:
+  dind:
+    image: docker:1.11-dind
+    privileged: true
+    command:
+      - "-s"
+      - "overlay"

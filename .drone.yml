@@ -77,8 +77,8 @@ pipeline:
       - cd kube-pttg-ip-stub
       - ./deploy.sh
     when:
-      branch: development
-      event: push
+      branch: [master]
+      event: [push, tag]
 
   deploy:
     image: quay.io/ukhomeofficedigital/kd:v0.2.2

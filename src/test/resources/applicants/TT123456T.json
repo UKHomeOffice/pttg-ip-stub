@@ -1,0 +1,36 @@
+{
+  "individual" : {
+    "firstName" : "Bobby",
+    "lastName" : "Beans",
+    "nino" : "TT123456T",
+    "dateOfBirth": "1980-01-13"
+  },
+  "employments": [
+    {
+      "payFrequency": "MONTHLY",
+      "startDate": "2014-06-15",
+      "endDate": "2015-01-15",
+      "employer": {
+        "payeReference": "123/AI45678",
+        "name": "Flying Pizza Ltd",
+        "address": {
+          "line1": "Electric Works",
+          "line2": "Sheffield Digital Campus",
+          "line3": "Concourse Way",
+          "line4": "Sheffield",
+          "line5": "South Yorkshire",
+          "postcode": "S1 2BJ"
+        }
+      }
+    }
+  ],
+  "income": [
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1600.00, "nonTaxablePayment": 100.25, "paymentDate": "2014-06-15", "monthPayNumber": 3},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1600.00, "nonTaxablePayment": 100.25, "paymentDate": "2014-07-15", "monthPayNumber": 4},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1600.00, "nonTaxablePayment": 200.50, "paymentDate": "2014-08-15", "monthPayNumber": 5},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1600.00, "nonTaxablePayment": 200.50, "paymentDate": "2014-09-15", "monthPayNumber": 6},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1600.00, "nonTaxablePayment": 200.50, "paymentDate": "2014-11-15", "monthPayNumber": 7},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1600.00, "nonTaxablePayment": 200.50, "paymentDate": "2014-12-17", "monthPayNumber": 8},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1600.00, "nonTaxablePayment": 200.50, "paymentDate": "2015-01-15", "weekPayNumber": 31}
+  ]
+}

@@ -19,7 +19,7 @@ public class EmbeddedIncome extends ResourceSupport{
 
     @Getter
     @AllArgsConstructor
-    private class Embedded {
+    private static class Embedded {
         private final List<Income> income;
     }
 }

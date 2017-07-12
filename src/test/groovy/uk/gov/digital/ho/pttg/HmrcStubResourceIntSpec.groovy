@@ -1,5 +1,6 @@
 package uk.gov.digital.ho.pttg
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
 import org.springframework.beans.factory.annotation.Autowired
@@ -17,6 +18,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE
 
 @SpringBootTest(webEnvironment = RANDOM_PORT)
 @ContextConfiguration
+@SuppressFBWarnings
 class HmrcStubResourceIntSpec extends Specification {
 
     @Autowired

@@ -46,6 +46,7 @@ public class Migrate {
 
     private void writeFile(File directory, String filename, String json) {
         try {
+            System.out.print(".");
             IOUtils.write(json, new FileOutputStream(new File(directory, String.format("%s.json", filename.toUpperCase()))), "UTF8");
         } catch (IOException e) {
             e.printStackTrace();

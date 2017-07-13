@@ -1,22 +1,13 @@
 package uk.gov.digital.ho.pttg.migration;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.CompoundIndex;
-import org.springframework.data.mongodb.core.index.CompoundIndexes;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
-@Document
-@CompoundIndexes({
-        @CompoundIndex(name = "acc_idx", unique = true, def = "{'individual.nino' : 1}")
-})
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Applicants {
 
-    @Id
     private String id;
 
     @NotNull

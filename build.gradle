@@ -84,7 +84,6 @@ dependencies {
   // required migration only
   compile 'org.mongodb:mongodb-driver:3.0.4'
   compile 'org.mongodb:bson:3.0.4'
-  compile 'org.springframework.data:spring-data-mongodb:1.9.1.RELEASE'
 
   compileOnly 'org.projectlombok:lombok:1.16.12'
   testCompileOnly 'org.projectlombok:lombok:1.16.12'

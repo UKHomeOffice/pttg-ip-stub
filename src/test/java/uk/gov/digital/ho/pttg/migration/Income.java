@@ -1,11 +1,9 @@
 package uk.gov.digital.ho.pttg.migration;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.validation.constraints.NotNull;
 
-@Document
 public class Income {
 
     @JsonFormat(shape= JsonFormat.Shape.STRING)

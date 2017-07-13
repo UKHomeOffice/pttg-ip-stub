@@ -52,10 +52,6 @@
             <property name="max" value="2"/>
         </module>
         <module name="NestedTryDepth"/>
-        <module name="RedundantThrows">
-            <property name="allowUnchecked" value="true"/>
-            <property name="suppressLoadErrors" value="true"/>
-        </module>
         <module name="FinalClass"/>
         <module name="InterfaceIsType"/>
         <module name="BooleanExpressionComplexity"/>
@@ -115,5 +111,4 @@
     <module name="FileLength">
         <property name="max" value="1000"/>
     </module>
-    <module name="StrictDuplicateCode"/>
 </module>

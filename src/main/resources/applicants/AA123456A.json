@@ -1,8 +1,8 @@
 {
-  "individual" : {
-    "firstName" : "Mark",
-    "lastName" : "Jones",
-    "nino" : "AA123456A",
+  "individual": {
+    "firstName": "Mark",
+    "lastName": "Jones",
+    "nino": "AA123456A",
     "dateOfBirth": "1980-01-13"
   },
   "employments": [

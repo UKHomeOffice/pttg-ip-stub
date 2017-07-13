@@ -1,0 +1,108 @@
+{
+  "individual" : {
+    "firstName" : "Harry",
+    "lastName" : "Callahan",
+    "nino" : "QQ023987A",
+    "dateOfBirth" : "1980-01-31"
+  },
+  "employments" : [ {
+    "payFrequency" : "FOUR_WEEKLY",
+    "startDate" : "2015-01-17",
+    "endDate" : "2015-06-10",
+    "employer" : {
+      "payeReference" : "123/HC45678",
+      "name" : "Halifax PLC",
+      "address" : {
+        "line1" : "Electric Works",
+        "line2" : " Sheffield Digital Campus",
+        "line3" : "Concourse Way",
+        "line4" : "Sheffield",
+        "line5" : "South Yorkshire",
+        "postcode" : "S1 2BJ"
+      }
+    }
+  }, {
+    "payFrequency" : "FOUR_WEEKLY",
+    "startDate" : "2015-01-10",
+    "endDate" : "2015-06-17",
+    "employer" : {
+      "payeReference" : "123/FD45678",
+      "name" : "Flying Pizza Ltd",
+      "address" : {
+        "line1" : "Electric Works",
+        "line2" : " Sheffield Digital Campus",
+        "line3" : "Concourse Way",
+        "line4" : "Sheffield",
+        "line5" : "South Yorkshire",
+        "postcode" : "S1 2BJ"
+      }
+    }
+  } ],
+  "income" : [ {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 2000.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-01-10",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/HC45678",
+    "taxablePayment" : 1000.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-01-17",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 1666.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-02-01",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/HC45678",
+    "taxablePayment" : 2000.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-02-10",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 1666.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-03-01",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/HC45678",
+    "taxablePayment" : 2000.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-03-10",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 1666.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-04-01",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/HC45678",
+    "taxablePayment" : 2000.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-04-10",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/HC45678",
+    "taxablePayment" : 2000.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-05-10",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/HC45678",
+    "taxablePayment" : 2000.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-06-10",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 2000.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-06-17",
+    "weekPayNumber" : 1
+  } ]
+}

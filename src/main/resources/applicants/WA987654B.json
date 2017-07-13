@@ -1,0 +1,74 @@
+{
+  "individual" : {
+    "firstName" : "Wasim",
+    "lastName" : "Mohammed",
+    "nino" : "WA987654B",
+    "dateOfBirth" : "1980-01-31"
+  },
+  "employments" : [ {
+    "payFrequency" : "MONTHLY",
+    "startDate" : "2014-06-30",
+    "endDate" : "2015-01-30",
+    "employer" : {
+      "payeReference" : "123/FD45678",
+      "name" : "Flying Pizza Ltd",
+      "address" : {
+        "line1" : "Electric Works",
+        "line2" : " Sheffield Digital Campus",
+        "line3" : "Concourse Way",
+        "line4" : "Sheffield",
+        "line5" : "South Yorkshire",
+        "postcode" : "S1 2BJ"
+      }
+    }
+  } ],
+  "income" : [ {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 5833.33,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-01-30",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 5833.33,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-12-30",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 5833.33,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-11-30",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 5833.33,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-10-30",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 5833.33,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-09-30",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 5833.33,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-08-30",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 5833.33,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-07-30",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 5833.33,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-06-30",
+    "weekPayNumber" : 1
+  } ]
+}

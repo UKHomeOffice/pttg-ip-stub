@@ -82,6 +82,7 @@ dependencies {
   compile group: 'com.google.guava', name: 'guava', version: '21.0'
 
   compileOnly 'org.projectlombok:lombok:1.16.12'
+  testCompileOnly 'org.projectlombok:lombok:1.16.12'
 
   testCompile 'org.spockframework:spock-spring:1.1-groovy-2.4-rc-2'
   testCompile 'org.spockframework:spock-core:1.1-groovy-2.4-rc-2'

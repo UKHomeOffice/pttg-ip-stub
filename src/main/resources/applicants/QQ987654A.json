@@ -1,0 +1,78 @@
+{
+  "individual" : {
+    "firstName" : "Harry",
+    "lastName" : "Callahan",
+    "nino" : "QQ987654A",
+    "dateOfBirth" : "1980-01-31"
+  },
+  "employments" : [ {
+    "payFrequency" : "FOUR_WEEKLY",
+    "startDate" : "2015-05-20",
+    "endDate" : "2015-08-20",
+    "employer" : {
+      "payeReference" : "123/PD45678",
+      "name" : "Pizza Hut LTD",
+      "address" : {
+        "line1" : "Electric Works",
+        "line2" : " Sheffield Digital Campus",
+        "line3" : "Concourse Way",
+        "line4" : "Sheffield",
+        "line5" : "South Yorkshire",
+        "postcode" : "S1 2BJ"
+      }
+    }
+  }, {
+    "payFrequency" : "FOUR_WEEKLY",
+    "startDate" : "2015-01-04",
+    "endDate" : "2015-02-04",
+    "employer" : {
+      "payeReference" : "123/FD45678",
+      "name" : "Flying Pizza Ltd",
+      "address" : {
+        "line1" : "Electric Works",
+        "line2" : " Sheffield Digital Campus",
+        "line3" : "Concourse Way",
+        "line4" : "Sheffield",
+        "line5" : "South Yorkshire",
+        "postcode" : "S1 2BJ"
+      }
+    }
+  } ],
+  "income" : [ {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 1666.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-01-04",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 1666.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-02-04",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/PD45678",
+    "taxablePayment" : 2500.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-05-20",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/PD45678",
+    "taxablePayment" : 1666.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-06-20",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/PD45678",
+    "taxablePayment" : 1666.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-07-20",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/PD45678",
+    "taxablePayment" : 1666.00,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-08-20",
+    "weekPayNumber" : 1
+  } ]
+}

@@ -50,33 +50,4 @@ public class Income {
         this.employer = employer;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Income income1 = (Income) o;
-
-        if (payDate != null ? !payDate.equals(income1.payDate) : income1.payDate != null) return false;
-        if (income != null ? !income.equals(income1.income) : income1.income != null) return false;
-        return employer != null ? employer.equals(income1.employer) : income1.employer == null;
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = payDate != null ? payDate.hashCode() : 0;
-        result = 31 * result + (income != null ? income.hashCode() : 0);
-        result = 31 * result + (employer != null ? employer.hashCode() : 0);
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Income{" +
-                "payDate=" + payDate +
-                ", income='" + income + '\'' +
-                ", employer='" + employer + '\'' +
-                '}';
-    }
 }

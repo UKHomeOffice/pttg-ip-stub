@@ -61,36 +61,4 @@ public class Individual {
         this.nino = nino;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Individual that = (Individual) o;
-
-        if (title != null ? !title.equals(that.title) : that.title != null) return false;
-        if (forename != null ? !forename.equals(that.forename) : that.forename != null) return false;
-        if (surname != null ? !surname.equals(that.surname) : that.surname != null) return false;
-        return nino != null ? nino.equals(that.nino) : that.nino == null;
-
-    }
-
-    @Override
-    public int hashCode() {
-        int result = title != null ? title.hashCode() : 0;
-        result = 31 * result + (forename != null ? forename.hashCode() : 0);
-        result = 31 * result + (surname != null ? surname.hashCode() : 0);
-        result = 31 * result + (nino != null ? nino.hashCode() : 0);
-        return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Individual{" +
-                "title='" + title + '\'' +
-                ", forename='" + forename + '\'' +
-                ", surname='" + surname + '\'' +
-                ", nino='" + nino + '\'' +
-                '}';
-    }
 }

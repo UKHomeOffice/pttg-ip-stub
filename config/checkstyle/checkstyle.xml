@@ -54,7 +54,6 @@
         <module name="NestedTryDepth"/>
         <module name="FinalClass"/>
         <module name="InterfaceIsType"/>
-        <module name="BooleanExpressionComplexity"/>
         <module name="ClassFanOutComplexity">
             <property name="max" value="30"/>
         </module>

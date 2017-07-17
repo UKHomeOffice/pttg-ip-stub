@@ -27,6 +27,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
+import uk.gov.digital.ho.pttg.TotpGenerator;
 import uk.gov.digital.ho.pttg.dto.AccessToken;
 import uk.gov.digital.ho.pttg.dto.EmbeddedEmployments;
 import uk.gov.digital.ho.pttg.dto.EmbeddedIncome;
@@ -35,6 +36,8 @@ import uk.gov.digital.ho.pttg.dto.MatchedIndividual;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.security.InvalidKeyException;
+import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -59,8 +62,8 @@ public class HappyPathTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void employmentAndIncomeDetails() throws URISyntaxException {
-        String accessToken = getAccessToken("123445", "shdsahdadh");
+    public void employmentAndIncomeDetails() throws URISyntaxException, InvalidKeyException, NoSuchAlgorithmException {
+        String accessToken = getAccessToken("tMEV8jBnmqotNufIgBUNIz_QfhYa", TotpGenerator.getTotpCode("IAGVQR33EVGGSZYH"));
         String matchUrl = getMatchUrl(accessToken);
         Resource<MatchedIndividual> individualMatchUrl = getIndividualMatchUrl(matchUrl, accessToken);
         EmbeddedEmployments employments =

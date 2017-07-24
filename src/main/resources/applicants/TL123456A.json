@@ -26,13 +26,13 @@
     "employerPayeReference" : "123/FD45678",
     "taxablePayment" : 4600.00,
     "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-01-15",
+    "paymentDate" : "2015-01-16",
     "weekPayNumber" : 1
   }, {
     "employerPayeReference" : "123/FD45678",
     "taxablePayment" : 4168.00,
     "nonTaxablePayment" : 0,
-    "paymentDate" : "2014-12-17",
+    "paymentDate" : "2014-12-15",
     "weekPayNumber" : 1
   }, {
     "employerPayeReference" : "123/FD45678",

@@ -1,0 +1,34 @@
+{
+  "individual": {
+    "firstName": "Joe",
+    "lastName": "Bloggs",
+    "nino": "JB557733D",
+    "dateOfBirth": "1987-01-01"
+  },
+  "employments": [
+    {
+      "payFrequency": "MONTHLY",
+      "startDate": "2004-04-03",
+      "employer": {
+        "payeReference": "999/IT33356",
+        "name": "I.T Solutions Limited",
+        "address": {
+          "line1": "10 King Road",
+          "line2": "",
+          "line3": "",
+          "line4": "Sheffield",
+          "line5": "",
+          "postcode": ""
+        }
+      }
+    }
+  ],
+  "income": [
+    {"employerPayeReference": "999/IT33356", "taxablePayment": 1600.00, "nonTaxablePayment": 0, "paymentDate": "2017-06-30", "monthPayNumber": 3},
+    {"employerPayeReference": "999/IT33356", "taxablePayment": 1600.00, "nonTaxablePayment": 0, "paymentDate": "2017-05-31", "monthPayNumber": 2},
+    {"employerPayeReference": "999/IT33356", "taxablePayment": 1600.00, "nonTaxablePayment": 0, "paymentDate": "2017-04-30", "monthPayNumber": 1},
+    {"employerPayeReference": "999/IT33356", "taxablePayment": 1600.00, "nonTaxablePayment": 0, "paymentDate": "2017-03-31", "monthPayNumber": 12},
+    {"employerPayeReference": "999/IT33356", "taxablePayment": 1600.00, "nonTaxablePayment": 0, "paymentDate": "2017-02-28", "monthPayNumber": 11},
+    {"employerPayeReference": "999/IT33356", "taxablePayment": 1600.00, "nonTaxablePayment": 0, "paymentDate": "2017-01-31", "monthPayNumber": 10}
+  ]
+}

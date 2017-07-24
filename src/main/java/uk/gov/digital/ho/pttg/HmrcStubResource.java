@@ -79,21 +79,21 @@ public class HmrcStubResource {
         String json = IOUtils.toString(getJsonResource(matchId), Charset.forName("UTF8"));
         Individual individual = objectMapper.readValue(json, Applicant.class).getIndividual();
         individual.add(new Link(format("%s/individuals/%s", baseUrl, matchId)));
-        individual.add(new Link(format("%s/individuals/%s/employments/paye?fromDate=2016-01-13&toDate=2017-04-13", baseUrl, matchId), "employments"));
-        individual.add(new Link(format("%s/individuals/%s/income/paye?fromDate=2016-01-13&toDate=2017-04-13", baseUrl, matchId), "income"));
+        individual.add(new Link(format("%s/individuals/%s/employments/paye", baseUrl, matchId), "employments"));
+        individual.add(new Link(format("%s/individuals/%s/income/paye", baseUrl, matchId), "income"));
         return individual;
     }
 
     private EmbeddedEmployments createEmployments(String matchId, String baseUrl) throws IOException {
         String json = IOUtils.toString(getJsonResource(matchId), Charset.forName("UTF8"));
         EmbeddedEmployments embeddedEmployments = new EmbeddedEmployments(objectMapper.readValue(json, Applicant.class).getEmployments());
-        embeddedEmployments.add(new Link(format("%s/individuals/%s/employments/paye?fromDate=2016-01-13&toDate=2017-04-13", baseUrl, matchId)));
+        embeddedEmployments.add(new Link(format("%s/individuals/%s/employments/paye", baseUrl, matchId)));
         return embeddedEmployments;
     }
     private EmbeddedIncome createIncome(String matchId, String baseUrl) throws IOException {
         String json = IOUtils.toString(getJsonResource(matchId), Charset.forName("UTF8"));
         EmbeddedIncome embeddedIncome = new EmbeddedIncome(objectMapper.readValue(json, Applicant.class).getIncome());
-        embeddedIncome.add(new Link(format("%s/individuals/%s/income/paye?fromDate=2016-01-13&toDate=2017-04-13", baseUrl, matchId)));
+        embeddedIncome.add(new Link(format("%s/individuals/%s/income/paye", baseUrl, matchId)));
         return embeddedIncome;
     }
 
@@ -118,7 +118,10 @@ public class HmrcStubResource {
     }
 
     private String baseUrl(HttpServletRequest request) {
-        return format("%s://%s:%d",request.getScheme(),  request.getServerName(), request.getServerPort());
+        // HMRC do not return full url so we could have done this:
+        //return format("%s://%s:%d",request.getScheme(),  request.getServerName(), request.getServerPort());
+        // but instead just return blank
+        return "";
     }
 
     private String notFoundBody() {

@@ -33,7 +33,7 @@ class HmrcStubResourceIntSpec extends Specification {
         def response = restTemplate.exchange("/individuals", HttpMethod.GET,  createEntity(null), String.class)
         then:
         def entryPoint = jsonSlurper.parseText(response.body)
-        entryPoint._links.self.href =~ /http:\/\/localhost:[0-9]+\/individuals/
+        entryPoint._links.self.href =~ /\/individuals/
     }
 
     def 'entry point should return match'() {
@@ -41,7 +41,7 @@ class HmrcStubResourceIntSpec extends Specification {
         def response = restTemplate.exchange("/individuals", HttpMethod.GET,  createEntity(null), String.class)
         then:
         def entryPoint = jsonSlurper.parseText(response.body)
-        entryPoint._links.match.href =~ /http:\/\/localhost:[0-9]+\/individuals\/match/
+        entryPoint._links.match.href =~ /\/individuals\/match/
     }
 
     def 'should return 303 when matches'() {
@@ -71,7 +71,7 @@ class HmrcStubResourceIntSpec extends Specification {
 
         def response = restTemplate.postForEntity("/individuals/match", createEntity(jsonBuilder.toString()), String.class)
         then:
-        response.headers['Location'][0] =~ /http:\/\/localhost:[0-9]+\/individuals\/+./
+        response.headers['Location'][0] =~ /\/individuals\/+./
     }
 
     def 'should return 403 when no matches'() {
@@ -125,7 +125,7 @@ class HmrcStubResourceIntSpec extends Specification {
 
         then:
         def body = jsonSlurper.parseText(response.body)
-        body._links.employments.href =~ /http:\/\/localhost:[0-9]+\/individuals\/.+\/employments\/paye/
+        body._links.employments.href =~ /\/individuals\/.+\/employments\/paye/
     }
     def 'should return income link for matched individual'() {
         given:
@@ -143,7 +143,7 @@ class HmrcStubResourceIntSpec extends Specification {
 
         then:
         def body = jsonSlurper.parseText(response.body)
-        body._links.income.href =~ /http:\/\/localhost:[0-9]+\/individuals\/.+\/income\/paye/
+        body._links.income.href =~ /\/individuals\/.+\/income\/paye/
     }
 
     def 'should return list of employments when following matched link'() {
@@ -248,13 +248,13 @@ class HmrcStubResourceIntSpec extends Specification {
     def getEmploymentsUrlFor(String individual) {
         def response = restTemplate.exchange(getIndividualUrlFor(individual), HttpMethod.GET,  createEntity(null), String.class)
         def body = jsonSlurper.parseText(response.body)
-        return body._links.employments.href
+        return body._links.employments.href + '?fromDate=2016-01-01'
     }
 
     def getIncomeUrlFor(String individual) {
         def response = restTemplate.exchange(getIndividualUrlFor(individual), HttpMethod.GET,  createEntity(null), String.class)
         def body = jsonSlurper.parseText(response.body)
-        return body._links.income.href
+        return body._links.income.href + '?fromDate=2016-01-01'
     }
 
     def matchingNino() {

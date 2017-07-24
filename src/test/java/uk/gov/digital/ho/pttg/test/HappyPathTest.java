@@ -2,8 +2,6 @@ package uk.gov.digital.ho.pttg.test;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.collect.ImmutableList;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.utils.URIBuilder;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
@@ -28,11 +26,7 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 import uk.gov.digital.ho.pttg.TotpGenerator;
-import uk.gov.digital.ho.pttg.dto.AccessToken;
-import uk.gov.digital.ho.pttg.dto.EmbeddedEmployments;
-import uk.gov.digital.ho.pttg.dto.EmbeddedIncome;
-import uk.gov.digital.ho.pttg.dto.EntryPoint;
-import uk.gov.digital.ho.pttg.dto.MatchedIndividual;
+import uk.gov.digital.ho.pttg.dto.*;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -40,7 +34,6 @@ import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
 import static java.lang.String.format;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
@@ -81,21 +74,12 @@ public class HappyPathTest {
 
     private String withDateRange(String href) throws URISyntaxException {
         URIBuilder builder = new URIBuilder(href);
-        List<NameValuePair> templateParameters = ImmutableList.copyOf(builder.getQueryParams());
         builder.clearParameters();
-        builder.addParameter(findParameterName("from", templateParameters), "2016-01-31");
-        builder.addParameter(findParameterName("to", templateParameters), "2016-06-01");
+        builder.addParameter("fromDate", "2016-01-31");
+        builder.addParameter("toDate", "2016-06-01");
         return builder.build().toASCIIString();
     }
 
-    private String findParameterName(String matchName, List<NameValuePair> templateParameters) {
-        return templateParameters
-                .stream()
-                .filter(parameter -> parameter.getName().toLowerCase().contains(matchName))
-                .findAny()
-                .map(NameValuePair::getName)
-                .orElseThrow(() -> new RuntimeException("Don't know what parameter name should be"));
-    }
 
     private Resource<MatchedIndividual> getIndividualMatchUrl(String matchUrl, String accessToken) throws URISyntaxException {
         ResponseEntity<String> entity = restTemplate.postForEntity(matchUrl, createEntity(identityDetails(), accessToken), String.class);
@@ -147,8 +131,8 @@ public class HappyPathTest {
         return new Traverson(new URI(link), APPLICATION_JSON).setRestOperations(new RestTemplate(Collections.singletonList(getHalConverter())));
     }
 
-    private static Traverson.TraversalBuilder followTraverson(String link, String accessToken) throws URISyntaxException {
-        return traversonFor(link).follow().withHeaders(generateRestHeaders(accessToken));
+    private  Traverson.TraversalBuilder followTraverson(String link, String accessToken) throws URISyntaxException {
+        return traversonFor(restTemplate.getRestTemplate().getUriTemplateHandler().expand(link).toString()).follow().withHeaders(generateRestHeaders(accessToken));
     }
 
     private static HttpMessageConverter<?> getHalConverter() {

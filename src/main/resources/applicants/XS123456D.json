@@ -22,6 +22,23 @@
           "postcode": "S1 2BJ"
         }
       }
+    },
+    {
+      "payFrequency": "MONTHLY",
+      "startDate": "2015-01-16",
+      "endDate": "2017-01-15",
+      "employer": {
+        "payeReference": "999/IT33356",
+        "name": "Pass with duplicates and zeros",
+        "address": {
+          "line1": "Electric Works",
+          "line2": " Sheffield Digital Campus",
+          "line3": "Concourse Way",
+          "line4": "Sheffield",
+          "line5": "South Yorkshire",
+          "postcode": "S1 2BJ"
+        }
+      }
     }
   ],
   "income": [

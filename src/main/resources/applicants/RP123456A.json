@@ -1,0 +1,92 @@
+{
+  "individual": {
+    "firstName": "Barry",
+    "lastName": "White",
+    "nino": "RP123456A",
+    "dateOfBirth": "1980-01-13"
+  },
+  "employments": [
+    {
+      "payFrequency": "MONTHLY",
+      "startDate": "2012-04-15",
+      "endDate": "2017-03-15",
+      "employer": {
+        "payeReference": "123/AI45678",
+        "name": "Barrys Bikes",
+        "address": {
+          "line1": "Electric Works",
+          "line2": " Sheffield Digital Campus",
+          "line3": "Concourse Way",
+          "line4": "Sheffield",
+          "line5": "South Yorkshire",
+          "postcode": "S1 2BJ"
+        }
+      }
+    }
+  ],
+  "income": [
+
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2013-04-15", "monthPayNumber": 1},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2013-05-14", "monthPayNumber": 2},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2013-06-14", "monthPayNumber": 3},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2013-07-14", "monthPayNumber": 4},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2013-08-14", "monthPayNumber": 5},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2013-09-14", "monthPayNumber": 6},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2013-10-14", "monthPayNumber": 7},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2013-11-14", "monthPayNumber": 8},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2013-12-14", "monthPayNumber": 9},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-01-15", "monthPayNumber": 10},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-02-15", "monthPayNumber": 11},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-03-15", "monthPayNumber": 12},
+
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-04-14", "monthPayNumber": 1},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-05-17", "monthPayNumber": 2},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-06-14", "monthPayNumber": 3},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-07-14", "monthPayNumber": 4},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-08-14", "monthPayNumber": 5},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-09-14", "monthPayNumber": 6},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-10-14", "monthPayNumber": 7},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-11-14", "monthPayNumber": 8},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-12-14", "monthPayNumber": 9},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2015-01-13", "monthPayNumber": 10},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2015-02-15", "monthPayNumber": 11},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2015-03-15", "monthPayNumber": 12},
+
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2015-04-14", "monthPayNumber": 1},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2015-05-14", "monthPayNumber": 2},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2015-06-14", "monthPayNumber": 3},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2015-07-14", "monthPayNumber": 4},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2015-08-14", "monthPayNumber": 5},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2015-09-14", "monthPayNumber": 6},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2015-10-14", "monthPayNumber": 7},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2015-11-14", "monthPayNumber": 8},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2015-12-14", "monthPayNumber": 9},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2016-01-13", "monthPayNumber": 10},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2016-02-15", "monthPayNumber": 11},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2016-03-15", "monthPayNumber": 12},
+
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2016-04-14", "monthPayNumber": 1},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2016-05-14", "monthPayNumber": 2},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2016-06-14", "monthPayNumber": 3},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2016-07-14", "monthPayNumber": 4},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2016-08-14", "monthPayNumber": 5},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2016-09-14", "monthPayNumber": 6},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2016-10-14", "monthPayNumber": 7},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2016-11-14", "monthPayNumber": 8},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2016-12-14", "monthPayNumber": 9},
+
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2017-01-15", "monthPayNumber": 10},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2017-02-13", "monthPayNumber": 11},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2017-03-15", "monthPayNumber": 12},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2017-04-15", "monthPayNumber": 1},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2017-05-13", "monthPayNumber": 2},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2017-06-14", "monthPayNumber": 3},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2017-07-15", "monthPayNumber": 4},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2017-08-15", "monthPayNumber": 5},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2017-09-17", "monthPayNumber": 6},
+    {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2017-10-15", "monthPayNumber": 7},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2017-11-15", "monthPayNumber": 8}
+
+
+  ]
+}

@@ -40,7 +40,7 @@
     {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-03-15", "monthPayNumber": 12},
 
     {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-04-14", "monthPayNumber": 1},
-    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-05-117", "monthPayNumber": 2},
+    {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-05-17", "monthPayNumber": 2},
     {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-06-14", "monthPayNumber": 3},
     {"employerPayeReference": "123/AI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-07-14", "monthPayNumber": 4},
     {"employerPayeReference": "123/DI45678", "taxablePayment": 1000.00, "nonTaxablePayment": 0, "paymentDate": "2014-08-14", "monthPayNumber": 5},

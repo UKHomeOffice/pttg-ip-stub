@@ -10,10 +10,8 @@ import org.springframework.web.client.HttpClientErrorException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 
 import static java.lang.String.format;
@@ -29,72 +27,96 @@ public class HmrcStubResource {
         this.objectMapper = objectMapper;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public IndividualsEntryPoint entryPoint(HttpServletRequest request)
-    {
-        log.info("entry point called");
-        return createEntryPoint(baseUrl(request));
-    }
-
-    @RequestMapping(path = "/match", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE)
-    public String getMatchFor(@RequestBody Identity identity, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException, HttpClientErrorException {
+    @RequestMapping(path = "/matching", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE)
+    public NoBodyResource postMatchingFor(@RequestBody Identity identity, HttpServletRequest request, HttpServletResponse response) throws IOException, HttpClientErrorException {
         log.info("match called for " + identity.getNino());
         if (!hasMatch(identity)) {
+            log.info("no match found for " + identity.getNino());
             response.setStatus(HttpStatus.FORBIDDEN.value());
-            return notFoundBody();
+            return new NoBodyResource();
         }
-        response.setHeader("Location", format("%s/individuals/%s", baseUrl(request), identityKey(identity)));
-        response.setStatus(HttpStatus.SEE_OTHER.value());
-        return "";
+        return createMatchingNew(identityKey(identity), baseUrl(request));
     }
 
-
-    @RequestMapping(path = "/{matchId}", method = RequestMethod.GET)
-    public Individual individual(@PathVariable(name="matchId") String matchId, HttpServletRequest request) throws IOException {
-        log.info("individual called with {}", matchId);
-        return createIndividual(matchId, baseUrl(request));
+    @RequestMapping(path = "/matching/{matchId}", method = RequestMethod.GET, produces = "application/hal+json")
+    public EmbeddedIndividual getMatchingFor(@PathVariable(name="matchId") String matchId, HttpServletRequest request) throws IOException {
+        log.info("match GET called for " + matchId);
+        return createIndividualNew(matchId, baseUrl(request));
     }
 
-    @RequestMapping(path = "/{matchId}/employments/paye", method = RequestMethod.GET)
-    public EmbeddedEmployments employments(
-            @PathVariable(name="matchId") String matchId,
+    @RequestMapping(path = "/income/", method = RequestMethod.GET)
+    public NoBodyResource income(
+            @RequestParam(name = "matchId") String matchId,
+            HttpServletRequest request) throws IOException {
+        log.info("income called with {} ", matchId);
+        return createIncomeNew(matchId, baseUrl(request));
+    }
+
+    @RequestMapping(path = "/employments/", method = RequestMethod.GET)
+    public NoBodyResource employment(
+            @RequestParam(name = "matchId") String matchId,
+            HttpServletRequest request) throws IOException {
+        log.info("employment called with {} ", matchId);
+        return createEmploymentNew(matchId, baseUrl(request));
+    }
+
+    @RequestMapping(path = "/income/paye", method = RequestMethod.GET)
+    public Incomes incomePaye(
+            @RequestParam(name="matchId") String matchId,
             @RequestParam(name = "fromDate") String fromDate,
             @RequestParam(name = "toDate", required = false) String toDate,
             HttpServletRequest request) throws IOException {
-        log.info("employments called with {} fromDate={} toDate={}", matchId, fromDate, toDate);
-        return createEmployments(matchId, baseUrl(request));
+        log.info("incomesPaye called with {} fromDate={} toDate={}", matchId, fromDate, toDate);
+        return createIncomesNew(matchId, baseUrl(request));
     }
 
-    @RequestMapping(path = "/{matchId}/income/paye", method = RequestMethod.GET)
-    public EmbeddedIncome icome(
-            @PathVariable(name="matchId") String matchId,
+    @RequestMapping(path = "/employments/paye", method = RequestMethod.GET)
+    public Employments employmentPaye(
+            @RequestParam(name="matchId") String matchId,
             @RequestParam(name = "fromDate") String fromDate,
             @RequestParam(name = "toDate", required = false) String toDate,
             HttpServletRequest request) throws IOException {
-        log.info("income called with {} fromDate={} toDate={}", matchId, fromDate, toDate);
-        return createIncome(matchId, baseUrl(request));
+        log.info("employmentPaye called with {} fromDate={} toDate={}", matchId, fromDate, toDate);
+        return createEmploymentsNew(matchId, baseUrl(request));
     }
 
-    private Individual createIndividual(String matchId, String baseUrl) throws IOException {
+    private EmbeddedIndividual createIndividualNew(String matchId, String baseUrl) throws IOException {
         String json = IOUtils.toString(getJsonResource(matchId), Charset.forName("UTF8"));
-        Individual individual = objectMapper.readValue(json, Applicant.class).getIndividual();
+        EmbeddedIndividual individual = new EmbeddedIndividual(objectMapper.readValue(json, Applicant.class).getIndividual());
         individual.add(new Link(format("%s/individuals/%s", baseUrl, matchId)));
-        individual.add(new Link(format("%s/individuals/%s/employments/paye", baseUrl, matchId), "employments"));
-        individual.add(new Link(format("%s/individuals/%s/income/paye", baseUrl, matchId), "income"));
+        individual.add(new Link(format("%s/individuals/employments/?matchId=%s", baseUrl, matchId), "employments"));
+        individual.add(new Link(format("%s/individuals/income/?matchId=%s", baseUrl, matchId), "income"));
         return individual;
     }
 
-    private EmbeddedEmployments createEmployments(String matchId, String baseUrl) throws IOException {
-        String json = IOUtils.toString(getJsonResource(matchId), Charset.forName("UTF8"));
-        EmbeddedEmployments embeddedEmployments = new EmbeddedEmployments(objectMapper.readValue(json, Applicant.class).getEmployments());
-        embeddedEmployments.add(new Link(format("%s/individuals/%s/employments/paye", baseUrl, matchId)));
-        return embeddedEmployments;
+    private NoBodyResource createMatchingNew(String matchId, String baseUrl) throws IOException {
+        NoBodyResource individual = new NoBodyResource();
+        individual.add(new Link(format("%s/individuals/matching/%s", baseUrl, matchId), "individual"));
+        return individual;
     }
-    private EmbeddedIncome createIncome(String matchId, String baseUrl) throws IOException {
+
+    private NoBodyResource createIncomeNew(String matchId, String baseUrl) throws IOException {
+        NoBodyResource individual = new NoBodyResource();
+        individual.add(new Link(format("%s/individuals/%s", baseUrl, matchId)));
+        individual.add(new Link(format("%s/individuals/income/paye?matchId=%s", baseUrl, matchId), "paye"));
+        return individual;
+    }
+
+    private Incomes createIncomesNew(String matchId, String baseUrl) throws IOException {
         String json = IOUtils.toString(getJsonResource(matchId), Charset.forName("UTF8"));
-        EmbeddedIncome embeddedIncome = new EmbeddedIncome(objectMapper.readValue(json, Applicant.class).getIncome());
-        embeddedIncome.add(new Link(format("%s/individuals/%s/income/paye", baseUrl, matchId)));
-        return embeddedIncome;
+        return new Incomes(objectMapper.readValue(json, Applicant.class).getIncome());
+    }
+
+    private NoBodyResource createEmploymentNew(String matchId, String baseUrl) throws IOException {
+        NoBodyResource individual = new NoBodyResource();
+        individual.add(new Link(format("%s/individuals/%s", baseUrl, matchId)));
+        individual.add(new Link(format("%s/individuals/employments/paye?matchId=%s", baseUrl, matchId), "paye"));
+        return individual;
+    }
+
+    private Employments createEmploymentsNew(String matchId, String baseUrl) throws IOException {
+        String json = IOUtils.toString(getJsonResource(matchId), Charset.forName("UTF8"));
+        return new Employments(objectMapper.readValue(json, Applicant.class).getEmployments());
     }
 
 
@@ -107,14 +129,7 @@ public class HmrcStubResource {
     }
 
     private InputStream getJsonResource(String key) {
-        return getClass().getResourceAsStream(format("/applicants/%s.json", key));
-    }
-
-    private IndividualsEntryPoint createEntryPoint(String baseUrl) {
-        IndividualsEntryPoint individualsEntryPoint = new IndividualsEntryPoint();
-        individualsEntryPoint.add(new Link(format("%s/individuals", baseUrl)));
-        individualsEntryPoint.add(new Link(format("%s/individuals/match", baseUrl), "match"));
-        return individualsEntryPoint;
+        return this.getClass().getResourceAsStream(format("/applicants/%s.json", key));
     }
 
     private String baseUrl(HttpServletRequest request) {

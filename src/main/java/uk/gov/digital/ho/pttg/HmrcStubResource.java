@@ -38,13 +38,13 @@ public class HmrcStubResource {
         return createMatchingNew(identityKey(identity), baseUrl(request));
     }
 
-    @RequestMapping(path = "/matching/{matchId}", method = RequestMethod.GET, produces = "application/hal+json")
+    @RequestMapping(path = "/matching/{matchId}", method = RequestMethod.GET, produces = "application/vnd.hmrc.P1.0+json")
     public EmbeddedIndividual getMatchingFor(@PathVariable(name="matchId") String matchId, HttpServletRequest request) throws IOException {
         log.info("match GET called for " + matchId);
         return createIndividualNew(matchId, baseUrl(request));
     }
 
-    @RequestMapping(path = "/income/", method = RequestMethod.GET)
+    @RequestMapping(path = "/income/", method = RequestMethod.GET, produces = "application/vnd.hmrc.P1.0+json")
     public NoBodyResource income(
             @RequestParam(name = "matchId") String matchId,
             HttpServletRequest request) throws IOException {
@@ -52,7 +52,7 @@ public class HmrcStubResource {
         return createIncomeNew(matchId, baseUrl(request));
     }
 
-    @RequestMapping(path = "/employments/", method = RequestMethod.GET)
+    @RequestMapping(path = "/employments/", method = RequestMethod.GET, produces = "application/vnd.hmrc.P1.0+json")
     public NoBodyResource employment(
             @RequestParam(name = "matchId") String matchId,
             HttpServletRequest request) throws IOException {
@@ -60,7 +60,7 @@ public class HmrcStubResource {
         return createEmploymentNew(matchId, baseUrl(request));
     }
 
-    @RequestMapping(path = "/income/paye", method = RequestMethod.GET)
+    @RequestMapping(path = "/income/paye", method = RequestMethod.GET, produces = "application/vnd.hmrc.P1.0+json")
     public Incomes incomePaye(
             @RequestParam(name="matchId") String matchId,
             @RequestParam(name = "fromDate") String fromDate,
@@ -70,7 +70,7 @@ public class HmrcStubResource {
         return createIncomesNew(matchId, baseUrl(request));
     }
 
-    @RequestMapping(path = "/employments/paye", method = RequestMethod.GET)
+    @RequestMapping(path = "/employments/paye", method = RequestMethod.GET, produces = "application/vnd.hmrc.P1.0+json")
     public Employments employmentPaye(
             @RequestParam(name="matchId") String matchId,
             @RequestParam(name = "fromDate") String fromDate,

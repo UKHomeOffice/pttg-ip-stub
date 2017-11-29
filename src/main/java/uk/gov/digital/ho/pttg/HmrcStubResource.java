@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.springframework.hateoas.Link;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpClientErrorException;
 
@@ -28,14 +29,14 @@ public class HmrcStubResource {
     }
 
     @RequestMapping(path = "/matching", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE, produces = "application/vnd.hmrc.P1.0+json")
-    public NoBodyResource postMatchingFor(@RequestBody Identity identity, HttpServletRequest request, HttpServletResponse response) throws IOException, HttpClientErrorException {
+    public ResponseEntity<NoBodyResource> postMatchingFor(@RequestBody Identity identity, HttpServletRequest request, HttpServletResponse response) throws IOException, HttpClientErrorException {
         log.info("match called for " + identity.getNino());
         if (!hasMatch(identity)) {
             log.info("no match found for " + identity.getNino());
-            response.setStatus(HttpStatus.FORBIDDEN.value());
-            return new NoBodyResource();
+            final ResponseEntity notFound = new ResponseEntity("There is no match for the information provided", HttpStatus.FORBIDDEN);
+            return notFound;
         }
-        return createMatchingNew(identityKey(identity), baseUrl(request));
+        return new ResponseEntity<NoBodyResource>(createMatchingNew(identityKey(identity), baseUrl(request)), HttpStatus.OK);
     }
 
     @RequestMapping(path = "/matching/{matchId}", method = RequestMethod.GET, produces = "application/vnd.hmrc.P1.0+json")

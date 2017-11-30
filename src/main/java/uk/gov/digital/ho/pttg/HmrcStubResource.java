@@ -28,7 +28,7 @@ public class HmrcStubResource {
         this.objectMapper = objectMapper;
     }
 
-    @RequestMapping(path = "/matching", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE, produces = "application/vnd.hmrc.P1.0+json")
+    @RequestMapping(path = "/matching", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE, produces = {"application/hal+json", "application/vnd.hmrc.P1.0+json"})
     public ResponseEntity<NoBodyResource> postMatchingFor(@RequestBody Identity identity, HttpServletRequest request, HttpServletResponse response) throws IOException, HttpClientErrorException {
         log.info("match called for " + identity.getNino());
         if (!hasMatch(identity)) {

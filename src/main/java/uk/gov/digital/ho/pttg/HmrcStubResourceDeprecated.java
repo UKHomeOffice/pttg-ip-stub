@@ -32,6 +32,26 @@ public class HmrcStubResourceDeprecated {
         this.objectMapper = objectMapper;
     }
 
+    @RequestMapping(method = RequestMethod.GET)
+    public IndividualsEntryPoint entryPoint(HttpServletRequest request)
+    {
+        log.info("entry point called");
+        return createEntryPoint(baseUrl(request));
+    }
+
+    @RequestMapping(path = "/match", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE)
+    public String getMatchFor(@RequestBody Identity identity, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException, HttpClientErrorException {
+        log.info("match called for " + identity.getNino());
+        if (!hasMatch(identity)) {
+            response.setStatus(HttpStatus.FORBIDDEN.value());
+            return notFoundBody();
+        }
+        response.setHeader("Location", format("%s/individuals/%s", baseUrl(request), identityKey(identity)));
+        response.setStatus(HttpStatus.SEE_OTHER.value());
+        return "";
+    }
+
+
     @RequestMapping(path = "/{matchId}", method = RequestMethod.GET)
     public Individual individual(@PathVariable(name="matchId") String matchId, HttpServletRequest request) throws IOException {
         log.info("individual called with {}", matchId);
@@ -58,28 +78,9 @@ public class HmrcStubResourceDeprecated {
         return createIncome(matchId, baseUrl(request));
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public IndividualsEntryPoint entryPoint(HttpServletRequest request)
-    {
-        log.info("entry point called");
-        return createEntryPoint(baseUrl(request));
-    }
-
-    @RequestMapping(path = "/match", method = RequestMethod.POST, consumes = APPLICATION_JSON_VALUE)
-    public String getMatchFor(@RequestBody Identity identity, HttpServletRequest request, HttpServletResponse response) throws UnsupportedEncodingException, HttpClientErrorException {
-        log.info("match called for " + identity.getNino());
-        if (!hasMatch(identity)) {
-            response.setStatus(HttpStatus.FORBIDDEN.value());
-            return notFoundBody();
-        }
-        response.setHeader("Location", format("%s/individuals/%s", baseUrl(request), identityKey(identity)));
-        response.setStatus(HttpStatus.SEE_OTHER.value());
-        return "";
-    }
-
     private Individual createIndividual(String matchId, String baseUrl) throws IOException {
         String json = IOUtils.toString(getJsonResource(matchId), Charset.forName("UTF8"));
-        Individual individual = objectMapper.readValue(json, Applicant.class).getIndividual();
+        Individual individual = objectMapper.readValue(json, ApplicantDeprecated.class).getIndividual();
         individual.add(new Link(format("%s/individuals/%s", baseUrl, matchId)));
         individual.add(new Link(format("%s/individuals/%s/employments/paye", baseUrl, matchId), "employments"));
         individual.add(new Link(format("%s/individuals/%s/income/paye", baseUrl, matchId), "income"));
@@ -89,14 +90,14 @@ public class HmrcStubResourceDeprecated {
 
     private EmbeddedEmployments createEmployments(String matchId, String baseUrl) throws IOException {
         String json = IOUtils.toString(getJsonResource(matchId), Charset.forName("UTF8"));
-        EmbeddedEmployments embeddedEmployments = new EmbeddedEmployments(objectMapper.readValue(json, Applicant.class).getEmployments());
+        EmbeddedEmployments embeddedEmployments = new EmbeddedEmployments(objectMapper.readValue(json, ApplicantDeprecated.class).getEmployments());
         embeddedEmployments.add(new Link(format("%s/individuals/%s/employments/paye", baseUrl, matchId)));
         return embeddedEmployments;
     }
 
     private EmbeddedIncome createIncome(String matchId, String baseUrl) throws IOException {
         String json = IOUtils.toString(getJsonResource(matchId), Charset.forName("UTF8"));
-        EmbeddedIncome embeddedIncome = new EmbeddedIncome(objectMapper.readValue(json, Applicant.class).getIncome());
+        EmbeddedIncome embeddedIncome = new EmbeddedIncome(objectMapper.readValue(json, ApplicantDeprecated.class).getIncome());
         embeddedIncome.add(new Link(format("%s/individuals/%s/income/paye", baseUrl, matchId)));
         return embeddedIncome;
     }

@@ -62,7 +62,7 @@ public class HmrcStubResource {
     }
 
     @RequestMapping(path = "/income/paye", method = RequestMethod.GET, produces = "application/vnd.hmrc.P1.0+json")
-    public Incomes incomePaye(
+    public PayeIncome incomePaye(
             @RequestParam(name="matchId") String matchId,
             @RequestParam(name = "fromDate") String fromDate,
             @RequestParam(name = "toDate", required = false) String toDate,
@@ -103,9 +103,9 @@ public class HmrcStubResource {
         return individual;
     }
 
-    private Incomes createIncomesNew(String matchId, String baseUrl) throws IOException {
+    private PayeIncome createIncomesNew(String matchId, String baseUrl) throws IOException {
         String json = IOUtils.toString(getJsonResource(matchId), Charset.forName("UTF8"));
-        return new Incomes(objectMapper.readValue(json, Applicant.class).getIncome());
+        return objectMapper.readValue(json, PayeIncome.class);
     }
 
     private NoBodyResource createEmploymentNew(String matchId, String baseUrl) throws IOException {

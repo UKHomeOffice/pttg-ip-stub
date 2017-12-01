@@ -1,0 +1,10 @@
+{
+  "individual" : {
+    "firstName" : "Harry",
+    "lastName" : "Callahan",
+    "nino" : "QQ769875A",
+    "dateOfBirth" : "1980-01-31"
+  },
+  "employments" : [ ],
+  "income" : [ ]
+}

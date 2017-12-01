@@ -1,0 +1,34 @@
+{
+  "individual": {
+    "firstName": "John",
+    "lastName": "Quartermaine",
+    "nino": "JQ298875D",
+    "dateOfBirth": "1975-06-25"
+  },
+  "employments": [
+    {
+      "payFrequency": "MONTHLY",
+      "startDate": "2016-12-14",
+      "employer": {
+        "payeReference": "123/GH55446",
+        "name": "ABC Caterers",
+        "address": {
+          "line1": "Unit B1",
+          "line2": "Porterbrook Court",
+          "line3": "Kimberworth",
+          "line4": "Rotherham",
+          "line5": "South Yorkshire",
+          "postcode": "S88 9DD"
+        }
+      }
+    }
+  ],
+  "income": [
+    {"employerPayeReference": "123/GH55446", "taxablePayment": 4200.00, "nonTaxablePayment": 0, "paymentDate": "2017-06-15", "monthPayNumber": 3},
+    {"employerPayeReference": "123/GH55446", "taxablePayment": 4200.00, "nonTaxablePayment": 0, "paymentDate": "2017-05-15", "monthPayNumber": 2},
+    {"employerPayeReference": "123/GH55446", "taxablePayment": 4200.00, "nonTaxablePayment": 0, "paymentDate": "2017-04-15", "monthPayNumber": 1},
+    {"employerPayeReference": "123/GH55446", "taxablePayment": 4200.00, "nonTaxablePayment": 0, "paymentDate": "2017-03-15", "monthPayNumber": 12},
+    {"employerPayeReference": "123/GH55446", "taxablePayment": 4200.00, "nonTaxablePayment": 0, "paymentDate": "2017-02-15", "monthPayNumber": 11},
+    {"employerPayeReference": "123/GH55446", "taxablePayment": 4200.00, "nonTaxablePayment": 0, "paymentDate": "2017-01-15", "monthPayNumber": 10}
+  ]
+}

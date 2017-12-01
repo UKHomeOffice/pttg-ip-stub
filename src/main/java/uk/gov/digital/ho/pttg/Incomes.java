@@ -3,14 +3,13 @@ package uk.gov.digital.ho.pttg;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import org.springframework.hateoas.ResourceSupport;
 
 import java.util.List;
 
 @Getter
 @AllArgsConstructor
-@EqualsAndHashCode(callSuper = true)
-public class Incomes extends ResourceSupport{
+@EqualsAndHashCode
+public class Incomes {
 
     private final List<Income> income;
 }

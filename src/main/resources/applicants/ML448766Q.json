@@ -23,12 +23,50 @@
       }
     }
   ],
-  "income": [
-    {"employerPayeReference": "654/EDFFW", "taxablePayment": 1550.00, "nonTaxablePayment": 0, "paymentDate": "2017-06-30", "monthPayNumber": 3},
-    {"employerPayeReference": "654/EDFFW", "taxablePayment": 1550.00, "nonTaxablePayment": 0, "paymentDate": "2017-05-31", "monthPayNumber": 2},
-    {"employerPayeReference": "654/EDFFW", "taxablePayment": 1550.00, "nonTaxablePayment": 0, "paymentDate": "2017-04-30", "monthPayNumber": 1},
-    {"employerPayeReference": "654/EDFFW", "taxablePayment": 1550.00, "nonTaxablePayment": 0, "paymentDate": "2017-03-31", "monthPayNumber": 12},
-    {"employerPayeReference": "654/EDFFW", "taxablePayment": 1550.00, "nonTaxablePayment": 0, "paymentDate": "2017-02-28", "monthPayNumber": 11},
-    {"employerPayeReference": "654/EDFFW", "taxablePayment": 1550.00, "nonTaxablePayment": 0, "paymentDate": "2017-01-31", "monthPayNumber": 10}
-  ]
+  "paye": {
+    "income": [
+      {
+        "employerPayeReference": "654/EDFFW",
+        "taxablePayment": 1550.00,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2017-06-30",
+        "monthPayNumber": 3
+      },
+      {
+        "employerPayeReference": "654/EDFFW",
+        "taxablePayment": 1550.00,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2017-05-31",
+        "monthPayNumber": 2
+      },
+      {
+        "employerPayeReference": "654/EDFFW",
+        "taxablePayment": 1550.00,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2017-04-30",
+        "monthPayNumber": 1
+      },
+      {
+        "employerPayeReference": "654/EDFFW",
+        "taxablePayment": 1550.00,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2017-03-31",
+        "monthPayNumber": 12
+      },
+      {
+        "employerPayeReference": "654/EDFFW",
+        "taxablePayment": 1550.00,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2017-02-28",
+        "monthPayNumber": 11
+      },
+      {
+        "employerPayeReference": "654/EDFFW",
+        "taxablePayment": 1550.00,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2017-01-31",
+        "monthPayNumber": 10
+      }
+    ]
+  }
 }

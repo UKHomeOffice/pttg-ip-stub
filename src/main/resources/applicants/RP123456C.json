@@ -38,167 +38,197 @@
       }
     }
   } ],
-  "income" : [ {
-    "employerPayeReference" : "123/FD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-07-03",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/FD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-06-26",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/FD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2016-06-19",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/FD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-06-12",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/FD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-06-05",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/FD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-05-29",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/FD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-05-22",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/FD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-05-15",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/FD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-05-08",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/FD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-05-01",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/FD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-04-24",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/FD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-04-17",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-04-10",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-04-3",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-03-26",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-03-19",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-03-12",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-03-5",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-03-26",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-02-19",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-02-12",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-02-5",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-01-29",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-01-22",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-01-15",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-01-8",
-    "weekPayNumber" : 1
-  }, {
-    "employerPayeReference" : "123/PD45678",
-    "taxablePayment" : 600,
-    "nonTaxablePayment" : 0,
-    "paymentDate" : "2015-01-1",
-    "weekPayNumber" : 1
-  } ]
+  "paye": {
+    "income": [
+      {
+        "employerPayeReference": "123/FD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-07-03",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/FD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-06-26",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/FD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2016-06-19",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/FD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-06-12",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/FD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-06-05",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/FD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-05-29",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/FD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-05-22",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/FD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-05-15",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/FD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-05-08",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/FD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-05-01",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/FD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-04-24",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/FD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-04-17",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-04-10",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-04-3",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-03-26",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-03-19",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-03-12",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-03-5",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-03-26",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-02-19",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-02-12",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-02-5",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-01-29",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-01-22",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-01-15",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-01-8",
+        "weekPayNumber": 1
+      },
+      {
+        "employerPayeReference": "123/PD45678",
+        "taxablePayment": 600,
+        "nonTaxablePayment": 0,
+        "paymentDate": "2015-01-1",
+        "weekPayNumber": 1
+      }
+    ]
+  }
 }

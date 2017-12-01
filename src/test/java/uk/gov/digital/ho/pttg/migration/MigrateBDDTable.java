@@ -33,7 +33,7 @@ public class MigrateBDDTable {
     }
 
     public void migrate(String nino) throws IOException, URISyntaxException {
-        Applicant migratedApplicant = convert(readApplicant(nino));
+        ApplicantDeprecated migratedApplicant = convert(readApplicant(nino));
 
         String table = migratedApplicant.getIncome().stream().map(income -> row(income, migratedApplicant.getEmployments())).collect(Collectors.joining("\r\n"));
 
@@ -63,8 +63,8 @@ public class MigrateBDDTable {
         return number.toString();
     }
 
-    private Applicant convert(Applicants applicant) {
-        return new Applicant(getIndividual(applicant), getEmployments(applicant), getIncome(applicant));
+    private ApplicantDeprecated convert(Applicants applicant) {
+        return new ApplicantDeprecated(getIndividual(applicant), getEmployments(applicant), getIncome(applicant));
     }
 
     private List<Income> getIncome(Applicants applicant) {

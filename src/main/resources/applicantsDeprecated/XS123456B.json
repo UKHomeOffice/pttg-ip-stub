@@ -1,0 +1,494 @@
+{
+  "individual" : {
+    "firstName" : "Xavier",
+    "lastName" : "Snow",
+    "nino" : "XS123456B",
+    "dateOfBirth" : "1980-01-31"
+  },
+  "employments" : [ {
+    "payFrequency" : "WEEKLY",
+    "startDate" : "2014-10-11",
+    "endDate" : "2015-9-7",
+    "employer" : {
+      "payeReference" : "123/FD45678",
+      "name" : "Flying Pizza Ltd",
+      "address" : {
+        "line1" : "Electric Works",
+        "line2" : " Sheffield Digital Campus",
+        "line3" : "Concourse Way",
+        "line4" : "Sheffield",
+        "line5" : "South Yorkshire",
+        "postcode" : "S1 2BJ"
+      }
+    }
+  } ],
+  "income" : [ {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-12-22",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-12-15",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-12-08",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-12-01",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-11-24",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-11-17",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-11-10",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-11-3",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-10-26",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-10-19",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-10-12",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-10-5",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-9-28",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-9-21",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-9-14",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-9-7",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-8-31",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-8-24",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-8-17",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-8-10",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-8-3",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-7-26",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-7-19",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-7-12",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-7-5",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-6-29",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-6-22",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-6-15",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-6-8",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-6-1",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-5-24",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-5-22",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-5-15",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-5-08",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-5-01",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-4-24",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-4-17",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-4-10",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-4-3",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-3-26",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-3-19",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-3-12",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-3-5",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-2-28",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-2-21",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-2-14",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-2-7",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-1-31",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-1-24",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-1-17",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-1-10",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2015-1-3",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-12-26",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-12-19",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-12-12",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-12-12",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-12-7",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-11-30",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-11-23",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-11-16",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-11-9",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-11-2",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-10-25",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-10-18",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-10-11",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-10-4",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-9-27",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-9-20",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-9-13",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-9-6",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-8-29",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-8-22",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-8-15",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-8-8",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-8-1",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-7-25",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-7-18",
+    "weekPayNumber" : 1
+  }, {
+    "employerPayeReference" : "123/FD45678",
+    "taxablePayment" : 30.99,
+    "nonTaxablePayment" : 0,
+    "paymentDate" : "2014-7-10",
+    "weekPayNumber" : 1
+  } ]
+}

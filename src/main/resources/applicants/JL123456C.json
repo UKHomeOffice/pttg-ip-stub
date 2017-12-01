@@ -22,7 +22,7 @@
       }
     }
   } ],
-  "income" : [ {
+  "paye": {        "income": [ {
     "employerPayeReference" : "123/FD45678",
     "taxablePayment" : 1800.00,
     "nonTaxablePayment" : 0,

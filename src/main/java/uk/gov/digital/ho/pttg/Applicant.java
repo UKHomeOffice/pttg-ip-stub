@@ -12,5 +12,5 @@ import java.util.List;
 public class Applicant {
     private Individual individual;
     private List<Employment> employments;
-    private List<Income> income;
+    private PayeIncome paye;
 }

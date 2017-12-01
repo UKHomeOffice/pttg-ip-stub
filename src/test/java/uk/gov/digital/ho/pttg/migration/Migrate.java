@@ -35,9 +35,9 @@ public class Migrate {
     }
 
     public void migrate() throws IOException, URISyntaxException {
-        List<Applicant> migratedApplicants = readApplicants().stream().map((this::convert)).collect(toList());
+        List<ApplicantDeprecated> migratedApplicants = readApplicants().stream().map((this::convert)).collect(toList());
         ObjectMapper objectMapper = getMapper();
-        File directory = new File(getClass().getResource("/applicants/AA123456A.json").getPath()).getParentFile();
+        File directory = new File(getClass().getResource("/applicantsDeprecated/AA123456A.json").getPath()).getParentFile();
 
         List<ImmutablePair<String, String>> jsonFiles = migratedApplicants.stream().map(applicant -> toTuple(objectMapper, applicant)).collect(toList());
         jsonFiles.forEach((json) -> writeFile(directory, json.getLeft(), json.getRight()));
@@ -53,7 +53,7 @@ public class Migrate {
         }
     }
 
-    private ImmutablePair<String, String> toTuple(ObjectMapper objectMapper, Applicant applicant)  {
+    private ImmutablePair<String, String> toTuple(ObjectMapper objectMapper, ApplicantDeprecated applicant)  {
         try {
             return new ImmutablePair<>(applicant.getIndividual().getNino(), objectMapper.writeValueAsString(applicant));
         } catch (JsonProcessingException e) {
@@ -61,8 +61,8 @@ public class Migrate {
         }
     }
 
-    private Applicant convert(Applicants applicant) {
-        return new Applicant(getIndividual(applicant), getEmployments(applicant), getIncome(applicant));
+    private ApplicantDeprecated convert(Applicants applicant) {
+        return new ApplicantDeprecated(getIndividual(applicant), getEmployments(applicant), getIncome(applicant));
     }
 
     private List<Income> getIncome(Applicants applicant) {

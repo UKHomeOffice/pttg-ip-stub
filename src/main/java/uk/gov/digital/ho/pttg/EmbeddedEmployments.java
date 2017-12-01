@@ -10,7 +10,7 @@ import java.util.List;
 
 @Getter
 @AllArgsConstructor
-@EqualsAndHashCode(callSuper = true)
+@EqualsAndHashCode(callSuper=false)
 public class EmbeddedEmployments extends ResourceSupport{
     @JsonIgnore
     private final List<Employment> employments;
